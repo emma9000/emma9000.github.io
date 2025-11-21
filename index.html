@@ -1,304 +1,664 @@
-<!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
-  Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
-  For business & inquires, contact me => syednisarhassan12@gmail.com
--->
-
-<!--
-  Follow the instructions written in comments to create your stunning portfolio
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+  <title>Emma Xu | Project Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Project portfolio of Emma Xu, a full-stack software engineer (.NET / React / Python) based in New Zealand, with AI and GIS experience." />
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-soft: #02081a;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.3);
+      --radius-lg: 16px;
+      --radius-full: 999px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.95);
+      --transition-fast: 0.18s ease-out;
+    }
 
-  <!-- Put your site title here -->
-  <title>
-    Emma | A .Net Developer based in Auckland, New Zealand.
-  </title>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
-  <link rel="stylesheet" href="index.css" />
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 56px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 16px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(120deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.95);
+      position: sticky;
+      top: 12px;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #4ade80, #22c55e, #15803d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      color: #ecfeff;
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.6), 0 12px 26px rgba(34, 197, 94, 0.5);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      font-size: 15px;
+    }
+
+    .brand-text span:last-child {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-soft);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    nav a:hover {
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      margin-top: 28px;
+      padding: 24px 22px;
+      border-radius: 22px;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.38), transparent 52%),
+        linear-gradient(140deg, #020617, #020617 40%, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.7);
+      font-size: 11px;
+      color: #e0f2fe;
+      margin-bottom: 12px;
+    }
+
+    .hero-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
+    }
+
+    .hero-title {
+      font-size: 26px;
+      font-weight: 650;
+      margin-bottom: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-bottom: 14px;
+      max-width: 720px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .hero-tags span {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: background var(--transition-fast), transform var(--transition-fast),
+        box-shadow var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #0b1220;
+      font-weight: 600;
+      box-shadow: 0 14px 30px rgba(56, 189, 248, 0.6);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 44px rgba(56, 189, 248, 0.75);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.6);
+      color: var(--text-soft);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.98);
+      border-color: rgba(148, 163, 184, 0.9);
+      color: #e5e7eb;
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-top: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      padding: 12px 12px 14px;
+      border-radius: 18px;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), #020617);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.95);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .project-card.featured {
+      grid-column: span 2;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.32), rgba(15, 23, 42, 0.98));
+      border-color: rgba(56, 189, 248, 0.7);
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(56, 189, 248, 0.9);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 1);
+    }
+
+    .project-image-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(30, 64, 175, 0.7);
+      max-height: 210px;
+    }
+
+    .project-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: baseline;
+    }
+
+    .project-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .project-label {
+      font-size: 11px;
+      color: #93c5fd;
+    }
+
+    .project-meta {
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .project-desc {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .project-tech {
+      font-size: 11px;
+      color: #bae6fd;
+    }
+
+    .project-links {
+      margin-top: 6px;
+      font-size: 11px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .project-links a {
+      color: #7dd3fc;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+
+    .experience {
+      margin-top: 24px;
+      padding: 14px 14px 12px;
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(30, 64, 175, 0.7);
+      font-size: 12px;
+    }
+
+    .experience p {
+      color: var(--text-soft);
+    }
+
+    .experience strong {
+      color: #e5e7eb;
+    }
+
+    .contact {
+      margin-top: 26px;
+      padding: 14px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(8, 47, 73, 0.97));
+      border: 1px solid rgba(56, 189, 248, 0.7);
+      box-shadow: 0 16px 48px rgba(15, 23, 42, 1);
+      font-size: 12px;
+    }
+
+    .contact-row {
+      margin-top: 6px;
+    }
+
+    .contact-row a {
+      color: #7dd3fc;
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: 11px;
+      color: var(--text-soft);
+      text-align: center;
+      padding-top: 8px;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    @media (max-width: 840px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding: 18px 16px;
+      }
+
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .project-card.featured {
+        grid-column: span 1;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-  <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">skills</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-avatar">E</div>
+        <div class="brand-text">
           <span>Emma Xu</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>Master of Software Engineering student with 7 years of .NET development and 3 years of project management
-          experience. Skilled in backend development and system integration. A quick learner with strong problem-solving
-          and teamwork skills, looking for opportunities to contribute and develop further in New Zealand.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
-      </div>
-    </div>
-  </header>
-
-  <main role="main">
-
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Workshop production capacity information platform</h3>
-              <p>
-                B/S application, including production plan management, production process business management,
-                production test reporting records, production data statistics, equipment data collection and statistics,
-                and other functions
-              </p>
-              <ul class="work__list">
-                <li>.Net</li>
-                <li>MySQL</li>
-                <li>Refit</li>
-                <li>FTP</li>
-                <li>Quartz.NET</li>
-                <li>AutoMapper</li>
-                <li>VSTO</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Knowledge signature Quiz mini-program</h3>
-              <p>
-                It mainly realizes users to participate in activities by signing in and answering questions, with the
-                aim of draining traffic to the WeChat public platform.
-              </p>
-              <ul class="work__list">
-                <li>.Net</li>
-                <li>MySQL</li>
-                <li>Redis</li>
-                <li>MQ</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Production testing tools</h3>
-              <p>
-                LC/S desktop application to realize the production and testing of the company's hardware equipment,
-                including protocol testing, hardware testing, equipment authorization, production document printing,
-                data scanning code collection and other functions.
-              </p>
-              <ul class="work__list">
-                <li>serial port</li>
-                <li>UDP&TCP</li>
-                <li>zigbee</li>
-                <li>Lua</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Z Butler commodity outbound project</h3>
-              <p>
-                B/S application, responsible for the wholesale and retail business of Z Butler ERP management system.
-              </p>
-              <ul class="work__list">
-                <li>.NET Framework 4.5</li>
-                <li>SQLServer</li>
-                <li>Redis</li>
-                <li>Web api</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-            </div>
-          </div>
+          <span>Full-Stack Software Engineer · Auckland, NZ</span>
         </div>
       </div>
-    </section>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-    <!-- ***** Clients ***** -->
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-pill">
+          <div class="hero-pill-dot"></div>
+          Project Portfolio · Backend / Full-Stack / AI / GIS
+        </div>
+        <h1 class="hero-title">Selected Projects by Emma Xu</h1>
+        <p class="hero-subtitle">
+          I’m a full-stack software engineer (.NET / React / Python) with 7 years of professional experience across
+          backend services, microservices, cloud deployment, and C/S–B/S applications. This page highlights a few of my
+          recent and representative projects, including AI-enabled apps, IoT systems, and GIS-related work.
+        </p>
+        <div class="hero-tags">
+          <span>.NET Backend</span>
+          <span>React & TypeScript</span>
+          <span>Python · Whisper</span>
+          <span>Docker & Caddy</span>
+          <span>IoT & Device Data</span>
+          <span>GIS & Spatial</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn-primary" href="https://github.com/emma9000" target="_blank" rel="noreferrer">
+            View GitHub Profile
+          </a>
+          <a class="btn-ghost" href="https://www.linkedin.com/in/xin-xu-5506b92a4" target="_blank" rel="noreferrer">
+            Connect on LinkedIn
+          </a>
+        </div>
+        <p class="hero-note">
+          Designed mainly for recruiters and hiring managers: if you’d like to see code or deployments, feel free to
+          reach out.
+        </p>
+      </section>
 
-    <section class="client" id="clients">
-      <div class="row">
-        <h2>Skills</h2>
-        <div class="client__logos">
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Project Gallery</h2>
+          <p class="section-subtitle">Screenshots, architecture and technical highlights.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Featured: IntelliTranscribe -->
+          <article class="project-card featured">
+            <div class="project-image-wrapper">
+              <!-- TODO✅: 用你的 IntelliTranscribe 截图替换这个文件 -->
+              <img src="assets/intellitranscribe-ui.png" alt="IntelliTranscribe UI Screenshot" />
+            </div>
+            <div class="project-meta-row">
+              <div>
+                <div class="project-name">IntelliTranscribe – AI Real-Time Transcription</div>
+                <div class="project-meta">2024–2025 · Yoobee · AI / NLP / Full-Stack</div>
+              </div>
+              <div class="project-label">AI · Whisper · WebSocket</div>
+            </div>
+            <p class="project-desc">
+              Real-time multilingual transcription and summarisation using Whisper + LED, with Māori dictionary lookup,
+              low-latency WebSocket streaming, and a full-stack deployment on AWS.
+            </p>
+            <p class="project-tech">
+              Tech: Python (FastAPI), Whisper, LED summariser, React, WebSocket, Docker, Caddy, AWS
+            </p>
+            <div class="project-links">
+              <!-- TODO: 填上真正的仓库链接 / demo 链接 -->
+              <a href="https://github.com/MSE-D-E/intellitranscribe-backend" target="_blank">View code (GitHub)</a>
+              <a href="#" target="_blank">https://api.jobdao.org/dashboard</a>
+            </div>
+          </article>
+
+          <!-- JobDAO -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <!-- TODO✅: 用 JobDAO 的蓝湖设计图导出 PNG 后替换 -->
+              <img src="assets/jobdao-design.png" alt="JobDAO UI Design Mockup" />
+            </div>
+            <div class="project-meta-row">
+              <div>
+                <div class="project-name">JobDAO – Full-Stack Recruitment Platform</div>
+                <div class="project-meta">2024– · Personal project · Full-Stack + Web3</div>
+              </div>
+              <div class="project-label">.NET 8 · React · Web3</div>
+            </div>
+            <p class="project-desc">
+              A Web3-enabled recruitment platform exploring decentralised identity and wallet-based authentication,
+              built with .NET 8 + ABP on the backend and React + TypeScript on the frontend.
+            </p>
+            <p class="project-tech">
+              Tech: .NET 8, ABP, MySQL, React, TypeScript, TailwindCSS, Docker, Caddy, WalletConnect
+            </p>
+            <div class="project-links">
+              <span>MVP in development – design & backend foundation ready.</span>
+            </div>
+          </article>
+
+          <!-- Security Awareness Campaign (脱敏展示) -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <!-- TODO✅: 放一张你自己画的 quiz/活动页面示意图，不要用真实系统截图 -->
+              <img src="assets/security-campaign-mockup.png" alt="Security Awareness Campaign Mockup" />
+            </div>
+            <div class="project-meta-row">
+              <div>
+                <div class="project-name">Security Awareness Interactive Campaign</div>
+                <div class="project-meta">2023–2024 · Commercial client · High-traffic web campaign</div>
+              </div>
+              <div class="project-label">Vue2 · .NET 8</div>
+            </div>
+            <p class="project-desc">
+              An interactive signature + quiz campaign designed to improve user security awareness and engagement on
+              mobile devices. The project included user flows for sign-in, information display, and knowledge checks.
+            </p>
+            <p class="project-tech">
+              Tech: Vue2, .NET 8, MySQL, REST APIs, Redis, high-traffic optimisation (110k DAU, 2k QPS peak)
+            </p>
+            <div class="project-links">
+              <span>UI shown here is a generic mockup to protect client content.</span>
+            </div>
+          </article>
+
+          <!-- IoT Production Monitoring -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <!-- TODO✅: 你可以用架构图 / 流程图替代内部界面 -->
+              <img src="assets/iot-architecture.png" alt="IoT Production Monitoring Architecture Diagram" />
+            </div>
+            <div class="project-meta-row">
+              <div>
+                <div class="project-name">IoT Production Monitoring System – UIOT Smart Home</div>
+                <div class="project-meta">2021–2023 · UIOT · Industrial IoT</div>
+              </div>
+              <div class="project-label">.NET 5 · IoT · Data</div>
+            </div>
+            <p class="project-desc">
+              Industrial IoT platform for collecting device data from production lines, monitoring status, and
+              supporting analytics to improve manufacturing efficiency.
+            </p>
+            <p class="project-tech">
+              Tech: .NET 5, MySQL, Redis, Windows Services, Quartz.NET, TCP/UDP, Serial communication
+            </p>
+            <div class="project-links">
+              <span>Diagram represents architecture and data flow of the system.</span>
+            </div>
+          </article>
+
+          <!-- GIS Land Data Management -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <!-- TODO✅: 可用一个简化的 GIS 流程图 / 数据流图 -->
+              <img src="assets/GIS.png" alt="GIS Land Data Management System" />
+            </div>
+            <div class="project-meta-row">
+              <div>
+                <div class="project-name">GIS Land Data Digitisation & Management System</div>
+                <div class="project-meta">2017–2018 · SuperMap · GIS / Desktop</div>
+              </div>
+              <div class="project-label">WinForms · Oracle · GIS</div>
+            </div>
+            <p class="project-desc">
+              Desktop system for digitising and managing land survey data, supporting provincial-level mapping and land
+              information workflows.
+            </p>
+            <p class="project-tech">
+              Tech: C#, WinForms, DevExpress UI, Oracle, basic GIS & mapping workflows
+            </p>
+            <div class="project-links">
+              <span>Based on internal tooling, visualised here via simplified workflow diagram.</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience summary -->
+      <section id="experience" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Experience Snapshot</h2>
+          <p class="section-subtitle">More details are available on my CV and LinkedIn.</p>
+        </div>
+        <div class="experience">
           <p>
-            • Programming & Frameworks: .NET Framework, .NET Core, ASP.NET Web API, WinForms, VSTO
-            • Databases: SQL Server, MySQL, SQLite, Redis
-            • ORM: Entity Framework Core, Dapper
-            • Cloud & Deployment: Docker, Kubernetes (experience with Alibaba Cloud, adaptable to AWS/Azure)
-            • Tools: Git, SVN, DevExpress, Power Designer
-            • Other: Task scheduling (Quartz.NET, Hangfire), API integrations (WeChat Pay, DingTalk API)
-            • Strong problem-solving, teamwork, and documentation skills
+            I have <strong>7+ years</strong> of professional experience as a software engineer and project coordinator,
+            mainly focused on <strong>.NET backend</strong>, <strong>microservices</strong>, <strong>full-stack
+              web</strong>, and <strong>IoT / GIS-related systems</strong>. I’ve delivered projects in education,
+            manufacturing, media, and mapping domains, and I’m currently completing a
+            <strong>Master of Software Engineering</strong> in New Zealand.
           </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              Master of Software Engineering student with 7 years of .NET development and 3 years of project management
-              experience. Skilled in backend development and system integration. A quick learner with strong
-              problem-solving and teamwork skills, looking for opportunities to contribute and develop further in New
-              Zealand.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Open to backend / full-stack roles, internships and volunteer work in NZ.</p>
+        </div>
+        <div class="contact">
+          <p>
+            If you’d like to know more about any project on this page, or see code / architecture in detail,
+            feel free to reach out. I’m happy to walk through the systems, design decisions, and trade-offs.
+          </p>
+          <div class="contact-row">
+            <strong>Email:</strong>
+            <a href="mailto:love_emmaxu73@gmail.com">love_emmaxu73@gmail.com</a>
           </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/1.jpg" alt="" />
+          <div class="contact-row">
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/xin-xu-5506b92a4" target="_blank" rel="noreferrer">
+              linkedin.com/in/xin-xu-5506b92a4
+            </a>
+          </div>
+          <div class="contact-row">
+            <strong>GitHub:</strong>
+            <a href="https://github.com/emma9000" target="_blank" rel="noreferrer">
+              github.com/emma9000
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- ***** Contact ***** -->
+    <footer>
+      © <span id="year"></span> Emma Xu · Project Portfolio
+    </footer>
+  </div>
 
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:loveemmaxu73@gmail.com" class="btn">mailto:loveemmaxu73@gmail.com</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ***** Footer ***** -->
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://emma9000.github.io/githubprofile/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/xin-xu-5506b92a4/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image"
-              alt="Linkedin">
-          </a>
-        </li>
-      </ul>
-
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
-    </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
-  </a>
-  <script src="./index.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>
