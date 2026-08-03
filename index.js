@@ -1,43 +1,38 @@
-/* -----------------------------------------
-  Have focus outline only for keyboard users 
- ---------------------------------------- */
+// ---
+const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
+const smallMenu = document.querySelector('.header__sm-menu')
+const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
+const headerHamMenuCloseBtn = document.querySelector(
+  '.header__main-ham-menu-close'
+)
+const headerSmallMenuLinks = document.querySelectorAll('.header__sm-menu-link')
 
-const handleFirstTab = (e) => {
-  if(e.key === 'Tab') {
-    document.body.classList.add('user-is-tabbing')
-
-    window.removeEventListener('keydown', handleFirstTab)
-    window.addEventListener('mousedown', handleMouseDownOnce)
-  }
-
-}
-
-const handleMouseDownOnce = () => {
-  document.body.classList.remove('user-is-tabbing')
-
-  window.removeEventListener('mousedown', handleMouseDownOnce)
-  window.addEventListener('keydown', handleFirstTab)
-}
-
-window.addEventListener('keydown', handleFirstTab)
-
-const backToTopButton = document.querySelector(".back-to-top");
-let isBackToTopRendered = false;
-
-let alterStyles = (isBackToTopRendered) => {
-  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
-  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-  backToTopButton.style.transform = isBackToTopRendered
-    ? "scale(1)"
-    : "scale(0)";
-};
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 700) {
-    isBackToTopRendered = true;
-    alterStyles(isBackToTopRendered);
+hamMenuBtn.addEventListener('click', () => {
+  if (smallMenu.classList.contains('header__sm-menu--active')) {
+    smallMenu.classList.remove('header__sm-menu--active')
   } else {
-    isBackToTopRendered = false;
-    alterStyles(isBackToTopRendered);
+    smallMenu.classList.add('header__sm-menu--active')
   }
-});
+  if (headerHamMenuBtn.classList.contains('d-none')) {
+    headerHamMenuBtn.classList.remove('d-none')
+    headerHamMenuCloseBtn.classList.add('d-none')
+  } else {
+    headerHamMenuBtn.classList.add('d-none')
+    headerHamMenuCloseBtn.classList.remove('d-none')
+  }
+})
+
+for (let i = 0; i < headerSmallMenuLinks.length; i++) {
+  headerSmallMenuLinks[i].addEventListener('click', () => {
+    smallMenu.classList.remove('header__sm-menu--active')
+    headerHamMenuBtn.classList.remove('d-none')
+    headerHamMenuCloseBtn.classList.add('d-none')
+  })
+}
+
+// ---
+const headerLogoConatiner = document.querySelector('.header__logo-container')
+
+headerLogoConatiner.addEventListener('click', () => {
+  location.href = 'index.html'
+})
