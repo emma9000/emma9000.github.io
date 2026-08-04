@@ -10,7 +10,7 @@ I enjoy building clean, scalable systems — from backend APIs to cloud deployme
 This GitHub Pages site showcases my technical projects, including AI-enabled applications, full-stack systems, cloud deployments, and GIS-related tools.
 
 🌐 **Live Portfolio:**  
-https://emma9000.github.io/githubprofile 
+https://emma9000.github.io
 ---
 
 ## 🚀 Tech Stack
