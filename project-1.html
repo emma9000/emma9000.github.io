@@ -103,8 +103,9 @@
               Next.js 15 front end, a standalone Node.js transcription microservice
               talking to Deepgram Nova-3 for streaming ASR, Redis for the real-time
               Pub/Sub and sequencing layer, Postgres (Supabase) for persistence.
-              Deployed via Docker Compose behind Caddy on a Singapore VPS, GitHub
-              Actions for CI/CD.
+              Deployed via Docker Compose behind Caddy on a Singapore VPS. Deployment is a deliberate manual
+              pull-to-server process rather than automated CI/CD — keeping deploys as an explicit, reviewed step rather
+              than triggering on every push.
             </p>
             <p class="project-details__desc-para">
               The hardest problem wasn't the translation engine — Deepgram's
@@ -131,7 +132,6 @@
               <div class="skills__skill">Supabase / PostgreSQL</div>
               <div class="skills__skill">Gemini 2.5 Flash</div>
               <div class="skills__skill">Docker + Caddy</div>
-              <div class="skills__skill">GitHub Actions</div>
             </div>
           </div>
           <div class="project-details__links">
@@ -175,7 +175,6 @@
           </p>
         </div>
       </div>
-
       <div class="main-footer__lower">
         &copy; Copyright 2021. Made by
         <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com">Ram Maheshwari</a>
