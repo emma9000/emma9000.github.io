@@ -79,9 +79,8 @@
       <h1 class="heading-primary">Many Tongues</h1>
       <div class="project-cs-hero__info">
         <p class="text-primary">
-          A real-time transcription and translation platform for multilingual church services — designed, built, and
-          operated solo. In active use by 3 organisations in Auckland for the past two weeks, translating into 50+
-          languages.
+          Real-time transcription and translation platform for multilingual church services. Co-founded and built, in
+          active use by 10+ organisations in Auckland translating into 50+ languages.
         </p>
       </div>
       <div class="project-cs-hero__cta">
@@ -99,28 +98,22 @@
           <div class="project-details__desc">
             <h3 class="project-details__content-title">Project Overview</h3>
             <p class="project-details__desc-para">
-              The congregation scans a QR code and reads the sermon in their own
-              language on their phone — no app, no login, no download. Stack:
-              Next.js 15 front end, a standalone Node.js transcription microservice
-              talking to Deepgram Nova-3 for streaming ASR, Redis for the real-time
-              Pub/Sub and sequencing layer, Postgres (Supabase) for persistence.
-              Deployed via Docker Compose behind Caddy on a Singapore VPS. Deployment is a deliberate manual
-              pull-to-server process rather than automated CI/CD — keeping deploys as an explicit, reviewed step rather
-              than triggering on every push.
+              The congregation scans a QR code and reads the sermon in their own language on their phone. No app, no
+              login, no download required. The stack is a Next.js 15 front end, with a standalone Node.js transcription
+              microservice talking to Deepgram Nova-3 for streaming ASR, Redis for the real-time Pub/Sub and sequencing
+              layer, and Postgres (Supabase) for persistence. It's deployed via Docker Compose behind Caddy on a
+              Singapore VPS. Deployment is a deliberate manual pull-to-server process rather than automated CI/CD,
+              keeping deploys as an explicit, reviewed step rather than triggering on every push.
             </p>
             <p class="project-details__desc-para">
-              The hardest problem wasn't the translation engine — Deepgram's
-              streaming ASR routinely split one spoken sentence into several
-              fragments, so the translator had no context. Built a buffering layer
-              that holds fragments until a sentence actually ends (punctuation /
-              3-second silence gap with 30-character minimum / 150-character
-              ceiling as a safety valve).
+              The hardest problem wasn't the translation engine itself. Deepgram's streaming ASR routinely split one
+              spoken sentence into several fragments, leaving the translator with no context. I built a buffering layer
+              that holds fragments until a sentence actually ends, using punctuation, a 3-second silence gap with a
+              30-character minimum, and a 150-character ceiling as a safety valve.
             </p>
             <p class="project-details__desc-para">
-              Also solved keeping subtitle ordering intact across WebSocket
-              reconnects (Redis atomic HINCRBY for sequencing), and a production
-              incident where a cryptominer was found running inside a Docker
-              container rather than the host.
+              I also solved keeping subtitle ordering intact across WebSocket reconnects, using Redis's atomic HINCRBY
+              for sequencing.
             </p>
           </div>
           <div class="project-details__tools-used">
@@ -131,7 +124,7 @@
               <div class="skills__skill">Deepgram Nova-3</div>
               <div class="skills__skill">Redis Pub/Sub</div>
               <div class="skills__skill">Supabase / PostgreSQL</div>
-              <div class="skills__skill">Gemini 2.5 Flash</div>
+              <div class="skills__skill">Gemini 3.5 Flash</div>
               <div class="skills__skill">Docker + Caddy</div>
             </div>
           </div>
