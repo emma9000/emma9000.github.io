@@ -8,9 +8,9 @@
   <link rel="icon" href="./assets/ex-favicon.ico" sizes="any">
   <link rel="icon" href="./assets/ex-favicon-32.png" type="image/png">
   <link rel="apple-touch-icon" href="./assets/ex-favicon-180.png">
-  <title>Emma Xu | Portfolio</title>
+  <title>Emma Xu | Backend Software Engineer (.NET), Auckland</title>
   <meta name="description"
-    content="Emma Xu — full-stack software engineer in Auckland, NZ. .NET backend, Web3/DeFi, and GIS." />
+    content="Backend software engineer in Auckland, NZ. .NET, SQL Server and production systems." />
 
   <link rel="stylesheet" href="css/style.css" />
 
@@ -128,14 +128,15 @@
               Engineering in New Zealand.
             </p>
             <p class="about__content-details-para">
-              I work primarily in .NET, and have grown into full-stack and Web3. I independently designed, built, and operate Many Tongues,
-              a real-time translation platform for community organisations (manytongues.live), currently in use by 20+
-              organisations in Auckland. I also designed the architecture and built the core of a Web3-enabled
-              recruitment platform (jobdao.org), delivered with the team, and shipped DeFi modules during an industry blockchain internship.
+              I work primarily in .NET. I built backend services for an online quiz-and-pledge campaign platform
+              that served 50M+ users in its first year and is still running in production. I independently designed,
+              built, and operate Many Tongues, a real-time translation platform for community organisations
+              (manytongues.live), currently in use by 20+ organisations across New Zealand. I've also grown into full-stack
+              work, plus a Web3 recruitment platform (jobdao.org) and DeFi modules built during an internship.
             </p>
             <p class="about__content-details-para">
               My MSc in Surveying & Mapping Engineering, followed by a BEng in the same field, is where GIS comes from.
-              I then spent two years as a software developer building desktop GIS tooling at KQ GEO Technologies, before
+              I then worked as a software developer building desktop GIS tooling at KQ GEO Technologies, before
               moving into web development with front-end/back-end separated architectures. That background still shapes
               how I think about systems today.
             </p>
@@ -147,23 +148,22 @@
           <div class="skills">
             <div class="skills__skill">C# / .NET</div>
             <div class="skills__skill">ASP.NET Core</div>
-            <div class="skills__skill">Entity Framework</div>
+            <div class="skills__skill">EF Core</div>
             <div class="skills__skill">SQL Server</div>
             <div class="skills__skill">PostgreSQL</div>
             <div class="skills__skill">Redis</div>
+            <div class="skills__skill">Docker</div>
+            <div class="skills__skill">Kubernetes</div>
+            <div class="skills__skill">xUnit</div>
+            <div class="skills__skill">AWS</div>
+            <div class="skills__skill">GitHub Actions</div>
             <div class="skills__skill">React</div>
             <div class="skills__skill">TypeScript</div>
             <div class="skills__skill">Node.js</div>
             <div class="skills__skill">Next.js</div>
-            <div class="skills__skill">Solidity</div>
-            <div class="skills__skill">Hardhat / ethers.js</div>
-            <div class="skills__skill">xUnit</div>
-            <div class="skills__skill">Docker</div>
-            <div class="skills__skill">Kubernetes</div>
-            <div class="skills__skill">AWS</div>
-            <div class="skills__skill">GitHub Actions</div>
-            <div class="skills__skill">GIS / Spatial Data</div>
             <div class="skills__skill">Git</div>
+            <div class="skills__skill">GIS</div>
+            <div class="skills__skill">Solidity / Hardhat</div>
           </div>
         </div>
       </div>
@@ -174,11 +174,25 @@
       <h2 class="heading heading-sec heading-sec__mb-bg">
         <span class="heading-sec__main">Projects</span>
         <span class="heading-sec__sub">
-          A selection of full-stack, Web3, and GIS work
+          A selection of backend, full-stack and platform work
         </span>
       </h2>
 
       <div class="projects__content">
+        <div class="projects__row">
+          <div class="projects__row-img-cont">
+            <img src="./assets/security-campaign-mockup.png" alt="Security Awareness Interactive Campaign Screenshot"
+              class="projects__row-img" loading="lazy" />
+          </div>
+          <div class="projects__row-content">
+            <h3 class="projects__row-content-title">Security Awareness Interactive Campaign</h3>
+            <p class="projects__row-content-desc">
+              An online quiz-and-pledge campaign platform serving 50M+ users in its first year,
+              built for high traffic: 110k daily active users, 2k queries/sec at peak.
+            </p>
+            <a href="./project-6.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Case Study</a>
+          </div>
+        </div>
         <div class="projects__row">
           <div class="projects__row-img-cont">
             <img src="./assets/manytongues.png" alt="Many Tongues Screenshot" class="projects__row-img"
@@ -188,23 +202,23 @@
             <h3 class="projects__row-content-title">Many Tongues</h3>
             <p class="projects__row-content-desc">
               Real-time transcription and translation platform for community organisations. Independently designed,
-              built, and operated, in active use by 20+ organisations in Auckland translating into 60+ languages.
+              built, and operated, in active use by 20+ organisations across New Zealand translating into 60+ languages.
             </p>
             <a href="./project-1.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Case Study</a>
           </div>
         </div>
         <div class="projects__row">
           <div class="projects__row-img-cont">
-            <img src="./assets/onchain-platform.jpg" alt="DeFi Flight Simulator Screenshot" class="projects__row-img"
-              loading="lazy" />
+            <img src="./assets/iot-architecture.png" alt="IoT Production Monitoring System Screenshot"
+              class="projects__row-img" loading="lazy" />
           </div>
           <div class="projects__row-content">
-            <h3 class="projects__row-content-title">DeFi Flight Simulator</h3>
+            <h3 class="projects__row-content-title">IoT Production Monitoring System</h3>
             <p class="projects__row-content-desc">
-              Sole developer on nine full-stack DeFi modules, including NFT, DEX, lending
-              and wallet integration, for a blockchain education startup.
+              Industrial IoT platform collecting device data from production lines,
+              monitoring status, and supporting manufacturing analytics.
             </p>
-            <a href="./project-2.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Case Study</a>
+            <a href="./project-7.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Case Study</a>
           </div>
         </div>
         <div class="projects__row">
@@ -214,8 +228,7 @@
           <div class="projects__row-content">
             <h3 class="projects__row-content-title">JobDAO</h3>
             <p class="projects__row-content-desc">
-              A Web3-enabled recruitment platform: designed the architecture and built the core
-              .NET 9 (ABP) API and React/TypeScript frontend, delivered with the team.
+              A recruitment platform on .NET 9, ABP and EF Core 9, with Web3 wallet login.
             </p>
             <a href="./project-4.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Case Study</a>
           </div>
@@ -236,30 +249,16 @@
         </div>
         <div class="projects__row">
           <div class="projects__row-img-cont">
-            <img src="./assets/security-campaign-mockup.png" alt="Security Awareness Interactive Campaign Screenshot"
-              class="projects__row-img" loading="lazy" />
+            <img src="./assets/onchain-platform.jpg" alt="DeFi Flight Simulator Screenshot" class="projects__row-img"
+              loading="lazy" />
           </div>
           <div class="projects__row-content">
-            <h3 class="projects__row-content-title">Security Awareness Interactive Campaign</h3>
+            <h3 class="projects__row-content-title">DeFi Flight Simulator</h3>
             <p class="projects__row-content-desc">
-              An online quiz-and-pledge campaign platform serving 50M+ users in its first year,
-              built for high traffic: 110k daily active users, 2k queries/sec at peak.
+              Sole developer on nine full-stack DeFi modules, including NFT, DEX, lending
+              and wallet integration, for a blockchain education startup.
             </p>
-            <a href="./project-6.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Case Study</a>
-          </div>
-        </div>
-        <div class="projects__row">
-          <div class="projects__row-img-cont">
-            <img src="./assets/iot-architecture.png" alt="IoT Production Monitoring System Screenshot"
-              class="projects__row-img" loading="lazy" />
-          </div>
-          <div class="projects__row-content">
-            <h3 class="projects__row-content-title">IoT Production Monitoring System</h3>
-            <p class="projects__row-content-desc">
-              Industrial IoT platform collecting device data from production lines,
-              monitoring status, and supporting manufacturing analytics.
-            </p>
-            <a href="./project-7.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Case Study</a>
+            <a href="./project-2.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank">Case Study</a>
           </div>
         </div>
         <div class="projects__row">
@@ -320,7 +319,7 @@
         <div class="main-footer__row main-footer__row-2">
           <h4 class="heading heading-sm text-lt">Emma (Xin) Xu</h4>
           <p class="main-footer__short-desc">
-            Full-stack software engineer in Auckland, NZ — .NET, Web3/DeFi, and GIS.
+            Backend software engineer in Auckland, NZ. .NET, SQL Server and production systems.
           </p>
         </div>
       </div>

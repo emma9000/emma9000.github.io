@@ -64,7 +64,7 @@ https://emma9000.github.io
 - Peak 110k DAU, 2k QPS
 
 ### **IoT Production Monitoring System – UIOT Smart Home**
-- Tech: .NET 5 microservices, MySQL, Hangfire, Quartz.NET, DingTalk API, TCP/UDP, Serial  
+- Tech: .NET 5 microservices, MySQL, Hangfire, Quartz.NET, OAuth 2.0 SSO, Enterprise Collaboration API, TCP/UDP, Serial  
 - Designed and built the backend of a shop-floor production data platform, with device data pipelines and analytics dashboards
 
 ### **GIS Land Data Management (SuperMap)**
