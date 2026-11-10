@@ -5,7 +5,7 @@ Welcome to my portfolio repository.
 I’m a full-stack engineer with hands-on experience delivering commercial software: backend systems, microservices, C/S–B/S applications, and cloud-deployed platforms.  
 Completed a Master of Software Engineering in New Zealand (Yoobee College, 2025 - 2026), focusing on modern web technologies, AI/ML applications, and spatial/GIS systems.
 
-I enjoy building clean, scalable systems — from backend APIs to cloud deployment pipelines — and turning complex requirements into simple, working software.
+I enjoy building clean, scalable systems, from backend APIs to cloud deployment pipelines, and turning complex requirements into simple, working software.
 
 This GitHub Pages site showcases my technical projects, including AI-enabled applications, full-stack systems, cloud deployments, and GIS-related tools.
 
