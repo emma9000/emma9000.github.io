@@ -96,15 +96,24 @@
           <div class="project-details__desc">
             <h3 class="project-details__content-title">Project Overview</h3>
             <p class="project-details__desc-para">
-              Industrial IoT platform for collecting device data from production lines, monitoring status, and
-              supporting manufacturing analytics. Integrated with DingTalk's API to sync users and departments, and to
-              handle approval workflows and automated notifications. Used Hangfire for scheduled data sync and snapshot
-              jobs, and built VSTO Excel plugins for internal reporting tools.
+              Gathered requirements directly from production teams, then designed and built the backend of a shop-floor
+              production data platform (production planning, process management, test records, device data
+              collection) on three .NET 5 microservices with MySQL, Dapper, and Refit for inter-service calls.
+              Integrated DingTalk for single sign-on, organisation sync, notifications and approval workflows,
+              replacing the manual tracking of maintenance, scrap and production progress. Scheduled 36 Hangfire jobs
+              syncing ERP, SMT machine and test data into statistics tables for output, yield, equipment and plan
+              dashboards. Developed a Quartz.NET Windows service that cleans and uploads SMT line inspection results to
+              the cloud every 3 minutes.
             </p>
             <p class="project-details__desc-para">
-              Also built: production test tooling. A companion C/S desktop application for hardware production testing —
-              implementing protocol tests over Serial, UDP, and TCP to communicate with the company's ZigBee and network
-              devices, with Lua scripts used to parse ZigBee V3/V4 module protocols.
+              Contributed to a VSTO Excel add-in for production planners that schedules daily, weekly and monthly
+              plans through the platform's REST APIs, cutting a full planning cycle from about 3 to 5 days to within a
+              day.
+            </p>
+            <p class="project-details__desc-para">
+              Also contributed to production test tooling: a C# desktop application that runs Lua test plans over
+              Serial, UDP, and TCP against ZigBee and network devices, parsing the serial protocols of ZigBee modules
+              from NXP and another vendor, with results reported to the platform for quality management.
             </p>
           </div>
           <div class="project-details__tools-used">
@@ -112,10 +121,12 @@
             <div class="skills">
               <div class="skills__skill">.NET 5</div>
               <div class="skills__skill">MySQL</div>
-              <div class="skills__skill">Redis</div>
+              <div class="skills__skill">Dapper</div>
+              <div class="skills__skill">Refit</div>
               <div class="skills__skill">Hangfire</div>
               <div class="skills__skill">DingTalk API</div>
               <div class="skills__skill">VSTO Excel</div>
+              <div class="skills__skill">Lua</div>
               <div class="skills__skill">UDP/TCP</div>
               <div class="skills__skill">Windows Services</div>
               <div class="skills__skill">Quartz.NET</div>
